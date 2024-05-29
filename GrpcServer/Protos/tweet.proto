@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcServer.Protos";
+
+package tweet;
+
+service Tweeter{
+	rpc SendTweet(TweetRequest) returns (TweetReply);
+}
+
+message TweetRequest{
+	string message =1;
+}
+
+message TweetReply{
+	string message =1;
+}
